@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>林屿摄影 | 高级摄影作品集</title>
+    <meta
+      name="description"
+      content="林屿摄影个人作品展示网站，收录自然风光、城市脉动、人像纪实、会议集会与沉浸式摄影项目。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark">LY</span>
+        <span>林屿摄影</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#collections">专题</a>
+        <a href="#work">作品</a>
+        <a href="#map">探索项目</a>
+        <a href="#pricing">套餐</a>
+        <a href="#contact">预约</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-collage" aria-label="风景摄影拼贴首页">
+        <div class="collage" aria-hidden="true">
+          <img class="collage-image collage-a" src="" alt="" />
+          <img class="collage-image collage-b" src="" alt="" />
+          <img class="collage-image collage-c" src="" alt="" />
+          <img class="collage-image collage-d" src="" alt="" />
+          <img class="collage-image collage-e" src="" alt="" />
+          <img class="collage-image collage-f" src="" alt="" />
+        </div>
+        <div class="hero-copy">
+          <h1>林屿摄影</h1>
+          <p>
+            以风景为起点，延展到人物、街道、婚礼、商业与纪实。用冷静的画面节奏，
+            记录光线经过地点与人的方式。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#collections">进入专题</a>
+            <a class="button ghost" href="#contact">预约拍摄</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="网站摘要">
+        <div>
+          <strong class="metric" data-count-target="4">4</strong>
+          <span class="metric-label">摄影专题</span>
+        </div>
+        <div>
+          <strong class="metric" data-count-target="237">237</strong>
+          <span class="metric-label">精选样张</span>
+        </div>
+        <div>
+          <strong class="metric">Map</strong>
+          <span class="metric-label">城市生活地图计划</span>
+        </div>
+      </section>
+
+      <section class="section" id="collections">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Editorial Index</p>
+            <h2>按专题进入作品</h2>
+          </div>
+          <p class="section-lead">像翻开一本摄影画册，从风景切入，再进入人物、城市与事件。</p>
+        </div>
+        <div class="collection-grid" aria-label="摄影专题">
+          <button class="collection-tile large" type="button" data-filter-jump="nature">
+            <img src="" alt="自然风光" loading="lazy" />
+            <span><small>01</small><strong>自然风光</strong><em>山野、海岸与远行的静默边界</em></span>
+          </button>
+          <button class="collection-tile" type="button" data-filter-jump="city">
+            <img src="" alt="城市脉动" loading="lazy" />
+            <span><small>02</small><strong>城市脉动</strong><em>街道、建筑与人群移动</em></span>
+          </button>
+          <button class="collection-tile" type="button" data-filter-jump="people">
+            <img src="" alt="人像纪实" loading="lazy" />
+            <span><small>03</small><strong>人像纪实</strong><em>人物和环境之间的呼吸</em></span>
+          </button>
+          <button class="collection-tile" type="button" data-filter-jump="events">
+            <img src="" alt="会议集会" loading="lazy" />
+            <span><small>04</small><strong>会议集会</strong><em>现场秩序、表情与瞬间</em></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2>沉浸式作品集</h2>
+          </div>
+          <p class="section-lead">以具体项目组织作品，每个项目包含封面、主题说明与基础信息，点击项目查看大图与简介。</p>
+        </div>
+        <div class="work-controls">
+          <div class="filter-bar" aria-label="作品集筛选">
+            <button class="filter-button active" type="button" data-filter="all">全部</button>
+          </div>
+        </div>
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+      </section>
+
+      <section class="map-section" id="map">
+        <div class="map-copy">
+          <p class="eyebrow">正在探索的项目</p>
+          <h2>城市生活地图</h2>
+          <p>
+            一个正在筹备的项目：把适合拍摄的城市角落、光线时间、样张与路线整理成地图。
+            目前先从西安开始，逐步接入城墙周边的真实照片、路线与点位。
+          </p>
+          <div class="city-tags" aria-label="计划城市">
+            <span>西安</span>
+          </div>
+          <a class="map-entry-link" href="xian-city-wall-map.html">进入西安城墙生活地图</a>
+        </div>
+        <form class="project-form" id="projectForm">
+          <div class="form-intro">
+            <p class="eyebrow">Idea Box</p>
+            <h3>搜集你的想法</h3>
+            <p>告诉我你想在西安城墙附近记录的地点、时间和故事线。</p>
+          </div>
+          <label>
+            推荐地点
+            <input name="city" type="text" value="西安城墙" maxlength="24" required />
+          </label>
+          <label>
+            想法主题
+            <input name="theme" type="text" value="傍晚城墙与市井生活路线" maxlength="36" required />
+          </label>
+          <label>
+            具体建议
+            <textarea name="notes" rows="4" maxlength="120">例如：从永宁门到含光门，记录傍晚散步、骑行、摊贩灯光与城墙剪影。</textarea>
+          </label>
+          <button class="button primary" type="submit">提交想法</button>
+        </form>
+        <div class="project-board" id="projectBoard" aria-live="polite"></div>
+      </section>
+
+      <section class="pricing-section" id="pricing">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Booking</p>
+            <h2>拍摄套餐</h2>
+          </div>
+          <p class="section-lead">模拟报价用于展示版面，真实报价可按城市、档期和拍摄复杂度调整。</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span>Personal</span>
+            <h3>个人写真</h3>
+            <strong>¥899 起</strong>
+            <p>2 小时拍摄，12 张精修，适合个人形象、人像写真与社交头像。</p>
+            <a class="text-link" href="#contact">预约咨询</a>
+          </article>
+          <article class="price-card featured">
+            <span>Story</span>
+            <h3>婚礼 / 纪实</h3>
+            <strong>¥3,600 起</strong>
+            <p>半日跟拍，60 张精选调色，适合订婚、婚礼、家庭纪实与小型活动。</p>
+            <a class="text-link" href="#contact">预约咨询</a>
+          </article>
+          <article class="price-card">
+            <span>Brand</span>
+            <h3>商业产品</h3>
+            <strong>咨询报价</strong>
+            <p>按项目制定方案，覆盖产品静物、品牌视觉、空间与内容素材拍摄。</p>
+            <a class="text-link" href="#contact">预约咨询</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-label="预约拍摄"></section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> 林屿摄影</span>
+      <span>Personal Photography Portfolio</span>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="作品大图预览">
+      <button class="icon-button close-lightbox" type="button" aria-label="关闭预览">×</button>
+      <button class="icon-button lightbox-prev" type="button" aria-label="上一张">‹</button>
+      <figure>
+        <img id="lightboxImage" alt="" />
+        <figcaption>
+          <div>
+            <strong id="lightboxTitle"></strong>
+            <small id="lightboxMeta"></small>
+          </div>
+          <em id="lightboxStory"></em>
+        </figcaption>
+      </figure>
+      <button class="icon-button lightbox-next" type="button" aria-label="下一张">›</button>
+    </dialog>
+
+    <script src="photo-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

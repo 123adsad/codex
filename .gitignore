@@ -1,0 +1,6 @@
+/.agents/
+/output/
+/tools/
+/skills-lock.json
+*.tmp
+*.log

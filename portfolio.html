@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品浏览 | 林屿摄影</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="portfolio-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="返回首页">
+        <span>LY</span>
+        <strong>林屿摄影</strong>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="index.html#collections">专题</a>
+        <a href="index.html#work">作品</a>
+        <a href="index.html#map">探索项目</a>
+        <a href="index.html#pricing">套餐</a>
+        <a href="index.html#contact">预约</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="portfolio-hero" id="portfolioHero">
+        <p class="eyebrow" id="portfolioEyebrow">Portfolio</p>
+        <h1 id="portfolioTitle">作品浏览</h1>
+        <p id="portfolioIntro">
+          以专题或项目进入作品，像翻阅一组视觉档案一样查看完整照片。
+        </p>
+        <div class="topic-tabs" id="topicTabs" aria-label="作品专题"></div>
+      </section>
+
+      <section class="portfolio-body" aria-label="作品图片">
+        <div class="portfolio-summary" id="portfolioSummary"></div>
+        <div class="masonry-gallery" id="portfolioGallery"></div>
+      </section>
+    </main>
+
+    <dialog class="portfolio-lightbox" id="portfolioLightbox">
+      <div class="lightbox-tools" aria-label="查看工具">
+        <button class="icon-button lightbox-fullscreen" id="portfolioFullscreen" type="button" aria-label="全屏观看" title="全屏观看">⛶</button>
+        <button class="icon-button lightbox-zoom" id="portfolioZoom" type="button" aria-label="局部放大" title="局部放大" aria-pressed="false">＋</button>
+      </div>
+      <button class="icon-button close-lightbox" type="button" aria-label="关闭预览">×</button>
+      <div class="portfolio-image-stage" id="portfolioImageStage">
+        <img id="portfolioLightboxImage" alt="" />
+      </div>
+      <figcaption>
+        <div>
+          <strong id="portfolioLightboxTitle"></strong>
+          <small id="portfolioLightboxCounter"></small>
+        </div>
+        <span id="portfolioLightboxMeta"></span>
+        <div class="rating-panel" aria-label="照片评分">
+          <div class="rating-copy">
+            <span>评分</span>
+            <strong id="portfolioRatingAverage">--</strong>
+            <small id="portfolioRatingSummary">等待评价</small>
+          </div>
+          <div class="star-rating" id="portfolioRating" role="radiogroup" aria-label="五星评分">
+            <button type="button" data-rating="1" aria-label="1 星">★</button>
+            <button type="button" data-rating="2" aria-label="2 星">★</button>
+            <button type="button" data-rating="3" aria-label="3 星">★</button>
+            <button type="button" data-rating="4" aria-label="4 星">★</button>
+            <button type="button" data-rating="5" aria-label="5 星">★</button>
+          </div>
+        </div>
+      </figcaption>
+    </dialog>
+
+    <script src="photo-data.js"></script>
+    <script src="portfolio-page.js"></script>
+  </body>
+</html>
