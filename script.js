@@ -43,6 +43,7 @@ const lightboxMeta = document.querySelector("#lightboxMeta");
 const lightboxStory = document.querySelector("#lightboxStory");
 const projectForm = document.querySelector("#projectForm");
 const projectBoard = document.querySelector("#projectBoard");
+const ideaToast = document.querySelector("#ideaToast");
 const heroImages = [...document.querySelectorAll(".collage-image")];
 let visibleWorks = [...portfolioProjects];
 let activeIndex = 0;
@@ -268,19 +269,28 @@ function renderProjects() {
   });
 }
 
-function showProjectInterfacePreview(project) {
-  let preview = projectForm.querySelector(".project-interface-status");
-  if (!preview) {
-    preview = document.createElement("p");
-    preview.className = "project-interface-status";
-    projectForm.appendChild(preview);
-  }
+function showIdeaThanks() {
+  if (!ideaToast) return;
+  ideaToast.hidden = false;
+  window.requestAnimationFrame(() => {
+    ideaToast.classList.add("is-visible");
+  });
+  window.clearTimeout(showIdeaThanks.timer);
+  showIdeaThanks.timer = window.setTimeout(() => {
+    ideaToast.classList.remove("is-visible");
+    window.setTimeout(() => {
+      ideaToast.hidden = true;
+    }, 240);
+  }, 3200);
+}
 
-  preview.innerHTML = `
-    <strong>接口预览</strong>
-    <span>${project.city} · ${project.theme}</span>
-    <em>${project.notes || "后续可接入独立的城市生活地图项目页面。"}</em>
-  `;
+async function submitIdeaForm(formData) {
+  if (window.location.protocol === "file:") return;
+  await fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  });
 }
 
 function initHeroAutoGallery() {
@@ -557,8 +567,8 @@ function rebuildContactSection() {
         />
         <div>
           <p class="eyebrow">Photographer</p>
-          <h2>\u6797\u5c7f</h2>
-          <p>\u5e38\u9a7b\u4e0a\u6d77\u7684\u72ec\u7acb\u6444\u5f71\u5e08\uff0c\u5173\u6ce8\u81ea\u7136\u5149\u3001\u57ce\u5e02\u751f\u6d3b\u548c\u4eba\u7269\u5173\u7cfb\u3002\u4f5c\u54c1\u8986\u76d6\u5c71\u91ce\u3001\u57ce\u5e02\u3001\u4eba\u50cf\u4e0e\u73b0\u573a\u7eaa\u5b9e\u3002</p>
+          <h2>\u627f\u745c</h2>
+          <p>\u627f\u745c\u6444\u5f71 Thomas pics\uff0c\u5173\u6ce8\u81ea\u7136\u5149\u3001\u57ce\u5e02\u751f\u6d3b\u548c\u4eba\u7269\u5173\u7cfb\u3002\u4f5c\u54c1\u8986\u76d6\u5c71\u91ce\u3001\u57ce\u5e02\u3001\u4eba\u50cf\u4e0e\u73b0\u573a\u7eaa\u5b9e\u3002</p>
         </div>
       </section>
       <section class="contact-column social-column" aria-label="\u793e\u4ea4\u5a92\u4f53\u5173\u6ce8">
@@ -569,14 +579,14 @@ function rebuildContactSection() {
             <span class="social-logo xhs-logo">RED</span>
             <span>
               <strong>\u5c0f\u7ea2\u4e66</strong>
-              <small>RED ID: linyu_photo</small>
+              <small>RED ID: thomas_pics</small>
             </span>
           </a>
           <a class="social-profile" href="https://www.instagram.com" target="_blank" rel="noreferrer">
             <span class="social-logo ig-logo">IG</span>
             <span>
               <strong>Instagram</strong>
-              <small>@linyu.photo</small>
+              <small>@thomas.pics</small>
             </span>
           </a>
         </div>
@@ -587,7 +597,7 @@ function rebuildContactSection() {
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
         <strong>\u5fae\u4fe1\u9884\u7ea6</strong>
-        <small>WeChat: linyu-photo</small>
+        <small>WeChat: thomas-pics</small>
         <div class="direct-contact">
           <a href="mailto:hello@example.com">hello@example.com</a>
           <a href="tel:+8613800000000">+86 138 0000 0000</a>
@@ -622,15 +632,17 @@ gallery.addEventListener("click", (event) => {
 projectForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(projectForm);
-  const project = {
-    city: formData.get("city").toString().trim(),
-    theme: formData.get("theme").toString().trim(),
-    notes: formData.get("notes").toString().trim(),
-  };
+  const place = formData.get("city").toString().trim();
+  const theme = formData.get("theme").toString().trim();
 
-  if (!project.city || !project.theme) return;
+  if (!place || !theme) return;
 
-  showProjectInterfacePreview(project);
+  submitIdeaForm(formData)
+    .catch(() => {})
+    .finally(() => {
+      showIdeaThanks();
+      projectForm.reset();
+    });
 });
 
 document.querySelector(".close-lightbox").addEventListener("click", () => lightbox.close());
