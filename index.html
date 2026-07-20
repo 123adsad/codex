@@ -13,8 +13,11 @@
   <body>
     <header class="site-header" aria-label="主导航">
       <a class="brand" href="#top" aria-label="回到首页">
-        <span class="brand-mark">T</span>
-        <span>承瑀摄影</span>
+        <span class="brand-mark"><span>T</span><i></i></span>
+        <span class="brand-wordmark">
+          <strong>承瑀摄影</strong>
+          <small>Thomas pics</small>
+        </span>
       </a>
       <nav class="nav-links" aria-label="页面导航">
         <a href="#collections">专题</a>
@@ -36,7 +39,7 @@
           <img class="collage-image collage-f" src="" alt="" />
         </div>
         <div class="hero-copy">
-          <h1>承瑀摄影</h1>
+          <h1>承瑀摄影 <span>Thomas pics</span></h1>
           <p>
             以风景为起点，延展到人物、街道、婚礼、商业与纪实。用冷静的画面节奏，
             记录光线经过地点与人的方式。
@@ -119,11 +122,13 @@
             <span>西安</span>
           </div>
           <a class="map-entry-card" href="xian-city-wall-map.html" aria-label="进入西安生活地图">
-            <span>Xi'an City Wall</span>
+            <span class="map-entry-kicker">Xi'an City Wall</span>
             <strong>进入西安生活地图</strong>
             <em>路线 / 点位 / 光线时间 / 样张</em>
+            <b aria-hidden="true">→</b>
           </a>
         </div>
+        <div class="project-board" id="projectBoard" aria-live="polite"></div>
         <form class="project-form" id="projectForm" name="city-map-ideas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="city-map-ideas" />
           <p class="hidden-field">
@@ -148,7 +153,6 @@
           </label>
           <button class="button primary" type="submit">提交想法</button>
         </form>
-        <div class="project-board" id="projectBoard" aria-live="polite"></div>
       </section>
 
       <section class="pricing-section" id="pricing">
