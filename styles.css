@@ -199,8 +199,10 @@ textarea {
   position: relative;
   z-index: 1;
   display: grid;
+  width: min(100%, 930px);
+  justify-self: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, clamp(172px, 21vh, 236px));
+  grid-template-rows: none;
   gap: 18px;
   height: auto;
   min-height: 0;
@@ -209,7 +211,8 @@ textarea {
 .collage-image {
   position: static;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 14px 30px rgba(25, 35, 31, 0.22);
@@ -1670,7 +1673,7 @@ main > section,
   }
 
   .collage {
-    grid-template-rows: repeat(3, clamp(150px, 22vw, 220px));
+    width: min(100%, 840px);
   }
 
   .work-controls,
@@ -1722,7 +1725,7 @@ main > section,
   }
 
   .collage {
-    grid-template-rows: repeat(3, 136px);
+    grid-template-rows: none;
     gap: 10px;
     height: auto;
     min-height: 0;
