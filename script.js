@@ -144,6 +144,20 @@ function hydrateSiteFromPhotoLibrary() {
   }
   visibleWorks = [...portfolioProjects];
 
+  const projectCountMetric = document.querySelector("#projectCountMetric");
+  const projectPhotoMetric = document.querySelector("#projectPhotoMetric");
+  const workPhotoTotal = projectList.length
+    ? projectList.reduce((sum, project) => sum + project.count, 0)
+    : visibleWorks.reduce((sum, work) => sum + (Number.parseInt(work.count, 10) || 0), 0);
+  if (projectCountMetric) {
+    projectCountMetric.dataset.countTarget = visibleWorks.length.toString();
+    projectCountMetric.textContent = visibleWorks.length.toString();
+  }
+  if (projectPhotoMetric) {
+    projectPhotoMetric.dataset.countTarget = workPhotoTotal.toString();
+    projectPhotoMetric.textContent = workPhotoTotal.toString();
+  }
+
   if (collectionGrid) {
     collectionGrid.innerHTML = topicList
       .map((topic, index) => {
@@ -426,9 +440,9 @@ function observeReveal() {
 }
 
 function initStatsCounter() {
-  const statStrip = document.querySelector(".stats-strip");
+  const statStrips = [...document.querySelectorAll(".stats-strip, .work-stats")];
   const counters = [...document.querySelectorAll(".metric[data-count-target]")];
-  if (!statStrip || !counters.length) return;
+  if (!statStrips.length || !counters.length) return;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -471,14 +485,14 @@ function initStatsCounter() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        counters.forEach(animateCounter);
+        entry.target.querySelectorAll(".metric[data-count-target]").forEach(animateCounter);
         observer.unobserve(entry.target);
       });
     },
     { threshold: 0.35 }
   );
 
-  observer.observe(statStrip);
+  statStrips.forEach((strip) => observer.observe(strip));
 }
 
 function initSectionTransitions() {
@@ -568,7 +582,7 @@ function rebuildContactSection() {
         <div>
           <p class="eyebrow">Photographer</p>
           <h2>\u627f\u745c</h2>
-          <p>\u627f\u745c\u6444\u5f71 Thomas pics\uff0c\u5173\u6ce8\u81ea\u7136\u5149\u3001\u57ce\u5e02\u751f\u6d3b\u548c\u4eba\u7269\u5173\u7cfb\u3002\u4f5c\u54c1\u8986\u76d6\u5c71\u91ce\u3001\u57ce\u5e02\u3001\u4eba\u50cf\u4e0e\u73b0\u573a\u7eaa\u5b9e\u3002</p>
+          <p>\u627f\u745c\u6444\u5f71 Thomas pics\uff0c\u5173\u6ce8\u81ea\u7136\u5149\u3001\u57ce\u5e02\u751f\u6d3b\u548c\u4eba\u7269\u5173\u7cfb\u3002\u4f5c\u54c1\u8986\u76d6\u5c71\u91ce\u3001\u57ce\u5e02\u3001\u4eba\u50cf\u4e0e\u6d3b\u52a8\u7eaa\u5f55\u3002</p>
         </div>
       </section>
       <section class="contact-column social-column" aria-label="\u793e\u4ea4\u5a92\u4f53\u5173\u6ce8">

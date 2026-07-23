@@ -13,11 +13,7 @@
   <body>
     <header class="site-header" aria-label="主导航">
       <a class="brand" href="#top" aria-label="回到首页">
-        <span class="brand-mark"><span>T</span><i></i></span>
-        <span class="brand-wordmark">
-          <strong>承瑀摄影</strong>
-          <small>Thomas pics</small>
-        </span>
+        <img class="brand-logo" src="assets/thomas-pics-logo.svg" alt="承瑀摄影 Thomas Pics" />
       </a>
       <nav class="nav-links" aria-label="页面导航">
         <a href="#collections">专题</a>
@@ -41,8 +37,8 @@
         <div class="hero-copy">
           <h1>承瑀摄影 <span>Thomas pics</span></h1>
           <p>
-            以风景为起点，延展到人物、街道、婚礼、商业与纪实。用冷静的画面节奏，
-            记录光线经过地点与人的方式。
+            以风景为起点，延展到人物、街头、婚礼和活动。用冷静的画面节奏，
+            记录光线经过地点人与时空地流逝方式。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#collections">进入专题</a>
@@ -72,7 +68,6 @@
             <p class="eyebrow">Editorial Index</p>
             <h2>按专题进入作品</h2>
           </div>
-          <p class="section-lead">像翻开一本摄影画册，从风景切入，再进入人物、城市与事件。</p>
         </div>
         <div class="collection-grid" aria-label="摄影专题">
           <button class="collection-tile large" type="button" data-filter-jump="nature">
@@ -102,6 +97,20 @@
           </div>
           <p class="section-lead">以具体项目组织作品，每个项目包含封面、主题说明与基础信息，点击项目查看大图与简介。</p>
         </div>
+        <section class="work-stats" aria-label="沉浸式作品集数据">
+          <div>
+            <strong class="metric" id="projectCountMetric" data-count-target="3">3</strong>
+            <span class="metric-label">沉浸式作品集</span>
+          </div>
+          <div>
+            <strong class="metric" id="projectPhotoMetric" data-count-target="129">129</strong>
+            <span class="metric-label">项目照片</span>
+          </div>
+          <div>
+            <strong class="metric">Live</strong>
+            <span class="metric-label">持续更新</span>
+          </div>
+        </section>
         <div class="work-controls">
           <div class="filter-bar" aria-label="作品集筛选">
             <button class="filter-button active" type="button" data-filter="all">全部</button>
@@ -115,8 +124,8 @@
           <p class="eyebrow">正在探索的项目</p>
           <h2>城市生活地图</h2>
           <p>
-            一个正在筹备的项目：把适合拍摄的城市角落、光线时间、样张与路线整理成地图。
-            目前先从西安开始，逐步接入城墙周边的真实照片、路线与点位。
+            一个持续更新的项目：把适合拍摄的城市角落、光线时间、样张与路线整理成地图。
+            逐步接入城墙周边的真实照片、路线与点位。
           </p>
           <div class="city-tags" aria-label="计划城市">
             <span>西安</span>
@@ -136,20 +145,20 @@
           </p>
           <div class="form-intro">
             <p class="eyebrow">Idea Box</p>
-            <h3>搜集你的想法</h3>
-            <p>告诉我你想在西安城墙附近记录的地点、时间和故事线。</p>
+            <h3>由你来策划我的摄影</h3>
+            <p>分享你想被记录的地点、时间、人物或故事线，我会把这些灵感整理进后续拍摄计划。</p>
           </div>
           <label>
             推荐地点
-            <input name="city" type="text" value="西安城墙" maxlength="24" required />
+            <input name="city" type="text" value="西安" maxlength="24" required />
           </label>
           <label>
             想法主题
-            <input name="theme" type="text" value="傍晚城墙与市井生活路线" maxlength="36" required />
+            <input name="theme" type="text" value="一条值得记录的生活路线" maxlength="36" required />
           </label>
           <label>
             具体建议
-            <textarea name="notes" rows="4" maxlength="120">例如：从永宁门到含光门，记录傍晚散步、骑行、摊贩灯光与城墙剪影。</textarea>
+            <textarea name="notes" rows="4" maxlength="120">例如：某个街角、一次活动、一段人物关系，或一个适合拍摄的光线时间。</textarea>
           </label>
           <button class="button primary" type="submit">提交想法</button>
         </form>
@@ -161,7 +170,7 @@
             <p class="eyebrow">Booking</p>
             <h2>拍摄套餐</h2>
           </div>
-          <p class="section-lead">模拟报价用于展示版面，真实报价可按城市、档期和拍摄复杂度调整。</p>
+          <p class="section-lead">报价用于展示版面，真实报价可按城市、档期和拍摄复杂度调整。</p>
         </div>
         <div class="pricing-grid">
           <article class="price-card">
@@ -198,7 +207,7 @@
 
     <div class="idea-toast" id="ideaToast" role="status" aria-live="polite" hidden>
       <strong>感谢你的意见</strong>
-      <span>我会把这条想法纳入西安生活地图的后续整理。</span>
+      <span>我会把这条想法纳入后续拍摄策划与城市生活地图整理。</span>
     </div>
 
     <dialog class="lightbox" id="lightbox" aria-label="作品大图预览">

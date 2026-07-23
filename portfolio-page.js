@@ -539,7 +539,7 @@ function renderPage() {
     `
     : `
       <span>${activeCategory.label}</span>
-      <strong>${visiblePhotos.length} 张模拟作品</strong>
+      <strong>${visiblePhotos.length} 张作品</strong>
       <em>按分类整理</em>
     `;
 
