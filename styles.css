@@ -944,9 +944,15 @@ h3 {
 }
 
 .contact-section {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
   background: #e4dfd4;
-  padding-top: 68px;
-  padding-bottom: 56px;
+  margin-top: 26px;
+  padding-top: 54px;
+  padding-bottom: 50px;
+  border-top: 1px solid rgba(45, 58, 49, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 248, 0.48);
 }
 
 .map-project-page {
@@ -1007,11 +1013,12 @@ h3 {
 
 .contact-card {
   display: grid;
-  grid-template-columns: 1.08fr 0.95fr 0.78fr;
-  gap: clamp(28px, 4vw, 58px);
+  grid-template-columns: minmax(320px, 1.08fr) minmax(260px, 0.95fr) minmax(220px, 0.78fr);
+  gap: clamp(30px, 4vw, 62px);
   align-items: start;
   max-width: 1180px;
   margin: 0 auto;
+  min-height: 208px;
 }
 
 .contact-column {
@@ -1549,7 +1556,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding: 26px clamp(20px, 6vw, 78px);
+  padding: 22px clamp(20px, 6vw, 78px);
+  border-top: 1px solid rgba(45, 58, 49, 0.12);
+  background: #f2efe8;
   color: var(--muted);
   font-size: 0.88rem;
 }
