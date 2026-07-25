@@ -945,6 +945,8 @@ h3 {
 
 .contact-section {
   background: #e4dfd4;
+  padding-top: 68px;
+  padding-bottom: 56px;
 }
 
 .map-project-page {
@@ -1005,9 +1007,9 @@ h3 {
 
 .contact-card {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr 0.86fr;
-  gap: 18px;
-  align-items: stretch;
+  grid-template-columns: 1.08fr 0.95fr 0.78fr;
+  gap: clamp(28px, 4vw, 58px);
+  align-items: start;
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -1015,19 +1017,20 @@ h3 {
 .contact-column {
   display: grid;
   align-content: start;
-  gap: 14px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 253, 248, 0.62);
-  padding: 22px;
-  box-shadow: 0 18px 52px rgba(42, 47, 42, 0.08);
+  gap: 12px;
+}
+
+.contact-column + .contact-column {
+  min-height: 190px;
+  padding-left: clamp(24px, 3vw, 42px);
+  border-left: 1px solid rgba(45, 58, 49, 0.14);
 }
 
 .bio-column {
   display: grid;
-  grid-template-columns: 124px minmax(0, 1fr);
+  grid-template-columns: 104px minmax(0, 1fr);
   align-items: start;
-  gap: 16px;
+  gap: 18px;
 }
 
 .contact-bio-image {
@@ -1040,18 +1043,19 @@ h3 {
 
 .bio-column .eyebrow {
   font-size: 0.68rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .bio-column h2 {
-  font-size: clamp(1.8rem, 2.6vw, 2.7rem);
-  line-height: 1.08;
+  font-size: clamp(1.7rem, 2.2vw, 2.35rem);
+  line-height: 1.04;
   margin-bottom: 8px;
 }
 
 .bio-column p:not(.eyebrow) {
-  font-size: 0.92rem;
-  line-height: 1.72;
+  max-width: 300px;
+  font-size: 0.88rem;
+  line-height: 1.68;
 }
 
 .contact-column h2,
@@ -1065,33 +1069,37 @@ h3 {
 
 .social-column {
   align-content: start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .social-stack {
   display: grid;
-  gap: 8px;
+  gap: 12px;
+  margin-top: 6px;
 }
 
 .social-profile {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
   align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 9px 10px;
-  background: var(--surface);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(45, 58, 49, 0.12);
+}
+
+.social-profile:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .social-logo {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   place-items: center;
-  border-radius: 8px;
+  border-radius: 7px;
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 900;
 }
 
@@ -1122,34 +1130,29 @@ h3 {
 
 .direct-contact {
   display: grid;
-  gap: 6px;
-  margin-top: 4px;
+  gap: 7px;
+  margin-top: 16px;
 }
 
 .direct-contact a {
-  min-height: 34px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 7px 10px;
   color: var(--sage-dark);
-  background: var(--surface);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .wechat-column {
-  justify-items: center;
-  text-align: center;
-  align-content: center;
+  justify-items: start;
+  text-align: left;
+  align-content: start;
 }
 
 .qr-placeholder {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
-  width: 128px;
-  height: 128px;
-  padding: 14px;
+  gap: 6px;
+  width: 98px;
+  height: 98px;
+  padding: 11px;
   border: 1px solid var(--line);
   background: #f8f6ef;
 }
@@ -1677,6 +1680,15 @@ main > section,
 
   .contact-card {
     grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .contact-column + .contact-column {
+    min-height: 0;
+    padding-left: 0;
+    padding-top: 24px;
+    border-left: 0;
+    border-top: 1px solid rgba(45, 58, 49, 0.14);
   }
 
   .collage {
@@ -1802,7 +1814,7 @@ main > section,
   }
 
   .contact-bio-image {
-    max-width: 140px;
+    max-width: 112px;
   }
 
   .portfolio-hero {
