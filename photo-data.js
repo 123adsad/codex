@@ -1,5 +1,5 @@
-window.PHOTO_LIBRARY = {
-    "generatedAt":  "2026-07-25 10:35:30",
+﻿window.PHOTO_LIBRARY = {
+    "generatedAt":  "2026-07-25 11:43:06",
     "topics":  {
                    "nature":  {
                                   "key":  "nature",
@@ -3615,7 +3615,7 @@ window.PHOTO_LIBRARY = {
                                   "label":  "会议集会",
                                   "title":  "会议集会",
                                   "intro":  "Meeting and event works from the local photo library.",
-                                  "count":  23,
+                                  "count":  22,
                                   "photos":  [
                                                  {
                                                      "id":  "events-1",
@@ -3889,28 +3889,10 @@ window.PHOTO_LIBRARY = {
                                                  },
                                                  {
                                                      "id":  "events-16",
-                                                     "title":  "DSC01631",
-                                                     "category":  "events",
-                                                     "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-016-DSC01631.jpg",
-                                                     "filename":  "DSC01631.jpg",
-                                                     "ratio":  "wide",
-                                                     "width":  3240,
-                                                     "height":  2160,
-                                                     "time":  "2019-06-01 20:12:57",
-                                                     "camera":  "SONY ILCE-7M3",
-                                                     "aperture":  "f/2.8",
-                                                     "shutter":  "1/100s",
-                                                     "iso":  "ISO 12800",
-                                                     "focalLength":  "54mm",
-                                                     "location":  null
-                                                 },
-                                                 {
-                                                     "id":  "events-17",
                                                      "title":  "DSC01669",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-017-DSC01669.jpg",
+                                                     "src":  "assets/photos/events/events-016-DSC01669.jpg",
                                                      "filename":  "DSC01669.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3240,
@@ -3924,11 +3906,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-18",
+                                                     "id":  "events-17",
                                                      "title":  "DSC01675",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-018-DSC01675.jpg",
+                                                     "src":  "assets/photos/events/events-017-DSC01675.jpg",
                                                      "filename":  "DSC01675.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3240,
@@ -3942,11 +3924,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-19",
+                                                     "id":  "events-18",
                                                      "title":  "DSC07424",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-019-DSC07424.jpg",
+                                                     "src":  "assets/photos/events/events-018-DSC07424.jpg",
                                                      "filename":  "DSC07424.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3936,
@@ -3960,11 +3942,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-20",
+                                                     "id":  "events-19",
                                                      "title":  "DSC07502",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-020-DSC07502.jpg",
+                                                     "src":  "assets/photos/events/events-019-DSC07502.jpg",
                                                      "filename":  "DSC07502.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3936,
@@ -3978,11 +3960,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-21",
+                                                     "id":  "events-20",
                                                      "title":  "DSC07521",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-021-DSC07521.jpg",
+                                                     "src":  "assets/photos/events/events-020-DSC07521.jpg",
                                                      "filename":  "DSC07521.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3936,
@@ -3996,11 +3978,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-22",
+                                                     "id":  "events-21",
                                                      "title":  "DSC07588",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-022-DSC07588.jpg",
+                                                     "src":  "assets/photos/events/events-021-DSC07588.jpg",
                                                      "filename":  "DSC07588.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3936,
@@ -4014,11 +3996,11 @@ window.PHOTO_LIBRARY = {
                                                      "location":  null
                                                  },
                                                  {
-                                                     "id":  "events-23",
+                                                     "id":  "events-22",
                                                      "title":  "DSC07675",
                                                      "category":  "events",
                                                      "categoryLabel":  "会议集会",
-                                                     "src":  "assets/photos/events/events-023-DSC07675.jpg",
+                                                     "src":  "assets/photos/events/events-022-DSC07675.jpg",
                                                      "filename":  "DSC07675.jpg",
                                                      "ratio":  "wide",
                                                      "width":  3936,
