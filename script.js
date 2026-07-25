@@ -611,10 +611,10 @@ function rebuildContactSection() {
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
         <strong>\u5fae\u4fe1\u9884\u7ea6</strong>
-        <small>WeChat: thomas-pics</small>
+        <small>WeChat: chengyu_95</small>
         <div class="direct-contact">
-          <a href="mailto:hello@example.com">hello@example.com</a>
-          <a href="tel:+8613800000000">+86 138 0000 0000</a>
+          <a href="mailto:605710591@qq.com">605710591@qq.com</a>
+          <a href="tel:+8613319119096">13319119096</a>
         </div>
       </section>
     </article>
