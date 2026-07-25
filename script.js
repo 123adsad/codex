@@ -576,8 +576,8 @@ function rebuildContactSection() {
       <section class="contact-column bio-column" aria-label="\u6444\u5f71\u5e08\u4ecb\u7ecd">
         <img
           class="contact-bio-image"
-          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=82"
-          alt="\u6444\u5f71\u5e08\u5de5\u4f5c\u7167"
+          src="assets/contact-dino-avatar.svg"
+          alt="\u53ef\u7231\u6f2b\u753b\u5c0f\u6050\u9f99\u5934\u50cf"
         />
         <div>
           <p class="eyebrow">Photographer</p>
