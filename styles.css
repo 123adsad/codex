@@ -353,7 +353,7 @@ h3 {
 }
 
 .stats-strip {
-  margin: 32px clamp(20px, 6vw, 78px) 64px;
+  margin: 32px clamp(20px, 6vw, 78px) 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
@@ -387,6 +387,10 @@ h3 {
 .pricing-section,
 .contact-section {
   padding: 92px clamp(20px, 6vw, 78px);
+}
+
+.stats-strip + .section {
+  padding-top: 42px;
 }
 
 .section-heading {
